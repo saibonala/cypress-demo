@@ -1,0 +1,21 @@
+{
+	"baseUrl": "http://pk7ksg1hy21h.cloud.wavemakeronline.com/HRScaffold",
+	"reporter": "cypress-multi-reporters",
+	"reporterOptions": {
+		"reporterEnabled": "mochawesome",
+		"mochawesomeReporterOptions": {
+			"reportDir": "cypress/reports/mocha",
+			"quite": true,
+			"overwrite": false,
+			"html": false,
+			"json": true
+		}
+	},
+	"defaultCommandTimeout": 10000,
+
+	"env": {
+		"baseUrl": "http://pk7ksg1hy21h.cloud.wavemakeronline.com/HRScaffold",
+        "username": "user",
+        "password": "user"
+	}
+}
