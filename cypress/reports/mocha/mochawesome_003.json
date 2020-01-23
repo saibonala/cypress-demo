@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-23T08:54:55.291Z",
+    "end": "2020-01-23T08:55:09.398Z",
+    "duration": 14107,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c8bbe2d9-6cfb-4f09-8ebc-7cca31e9c568",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1406f1c1-3d50-444a-850b-07dce0ddaa4d",
+          "title": "HRScaffold Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check anchors",
+              "fullTitle": "HRScaffold Tests Check anchors",
+              "timedOut": null,
+              "duration": 14021,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"../videos/HRScaffold-test.js.mp4\"",
+              "code": "cy.get('a[name=\"gridButton\"]').should('have.attr', 'caption', 'Employees');\nvar anchors = [];\ncy.get('.app-anchor').not('.active').not('a[name=\"logoutButton\"]').each(function ($el) {\n  if ($el.attr('name')) anchors.push($el.attr('name'));\n}).then(function () {\n  anchors.forEach(function (name) {\n    return cy.get('a[name=' + name + ']').click().wait(1000);\n  });\n});",
+              "err": {},
+              "uuid": "c1d68c43-b6f8-47be-9694-5e14b04b8b5e",
+              "parentUUID": "1406f1c1-3d50-444a-850b-07dce0ddaa4d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c1d68c43-b6f8-47be-9694-5e14b04b8b5e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14021,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.0.1"
+    }
+  }
+}
