@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-23T11:33:55.058Z",
+    "end": "2020-01-23T11:34:02.573Z",
+    "duration": 7515,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 2,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "c02116a2-daa3-4709-ba69-08014f91c808",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "12e5f7b8-55f4-44be-9c25-b1a192e10297",
+          "title": "Common test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check anchors",
+              "fullTitle": "Common test Check anchors",
+              "timedOut": null,
+              "duration": 254,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"../videos/common-test.js.mp4\"",
+              "code": "var anchors = [];\ncy.get('.app-anchor').not('.active').not('a[name=\"logoutButton\"]').each(function ($el) {\n  if ($el.attr('name')) anchors.push($el.attr('name'));\n}).then(function () {\n  anchors.forEach(function (name) {\n    return cy.get('a[name=' + name + ']').click().wait(1000);\n  });\n});",
+              "err": {
+                "message": "CypressError: You attempted to make a chai-jQuery assertion on an object that is neither a DOM object or a jQuery object.\n\nThe chai-jQuery assertion you used was:\n\n  > attr\n\nThe invalid subject you asserted on was:\n\n  > undefined\n\nTo use chai-jQuery assertions your subject must be valid.\n\nThis can sometimes happen if a previous assertion changed the subject.\n\nBecause this error occurred during a 'after each' hook we are skipping the remaining tests in the current suite: 'Common test'",
+                "estack": "CypressError: You attempted to make a chai-jQuery assertion on an object that is neither a DOM object or a jQuery object.\n\nThe chai-jQuery assertion you used was:\n\n  > attr\n\nThe invalid subject you asserted on was:\n\n  > undefined\n\nTo use chai-jQuery assertions your subject must be valid.\n\nThis can sometimes happen if a previous assertion changed the subject.\n\nBecause this error occurred during a 'after each' hook we are skipping the remaining tests in the current suite: 'Common test'\n    at Object.cypressErr (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:106136:11)\n    at Object.onInvalid (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:85909:24)\n    at assertDom (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:99681:26)\n    at Assertion.<anonymous> (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:99773:7)\n    at Assertion.ctx.<computed> [as attr] (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:6461:25)\n    at applyChainer (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:88860:32)\n    at http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:88894:16\n    at arrayReduce (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:144018:21)\n    at Function.reduce (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:153016:14)\n    at applyChainers (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:88888:16)\n    at tryCatcher (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:140400:23)\n    at Function.Promise.attempt.Promise.try (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:137675:29)\n    at Context.shouldFn (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:88897:23)\n    at Context.should (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:88912:23)\n    at Context.<anonymous> (http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:101348:21)\n    at http://pk7ksg1hy21h.cloud.wavemakeronline.com/__cypress/runner/cypress_runner.js:100826:33",
+                "diff": null
+              },
+              "uuid": "eb445878-904c-42cd-979f-b96583fb0d55",
+              "parentUUID": "12e5f7b8-55f4-44be-9c25-b1a192e10297",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "eb445878-904c-42cd-979f-b96583fb0d55"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 254,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.0.1"
+    }
+  }
+}

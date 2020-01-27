@@ -1,24 +1,12 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-Cypress.Commands.add('login', () => {
-	cy.visit(Cypress.env('baseUrl'))
-		.get('input[name="j_username"]')
-		.type(Cypress.env('username'))
-		.get('input[name="j_password"]')
-		.type(Cypress.env('password'))
-		.get('button[name="loginButton"]')
-		.click();
-	cy.get('a[name="gridButton"]').should('have.attr', 'caption', 'Employees');
+Cypress.Commands.add('signin', () => {
+	cy.visit(Cypress.env('url'), {
+		auth: {
+			username: Cypress.env('userid'),
+			password: Cypress.env('secret')
+		},
+	});
+	cy.get('section[type="header"]')
+	.should('have.attr', 'name', 'header');
 });
 //
 //
@@ -32,3 +20,10 @@ Cypress.Commands.add('login', () => {
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+// cy.visit(Cypress.env('url'))
+	// 	.get('input[name="j_username"]')
+	// 	.type(Cypress.env('userid'))
+	// 	.get('input[name="j_password"]')
+	// 	.type(Cypress.env('secret'))
+	// 	.get('button[name="loginButton"]')
+	// 	.click()

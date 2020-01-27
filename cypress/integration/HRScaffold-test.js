@@ -1,7 +1,6 @@
 describe('HRScaffold Tests', () => {
-	let anchors = [];
 	beforeEach(() => {
-		cy.login();
+		cy.signin();
 	});
 	it('Check Employees in HRScaffold!', () => {
 		cy.get('a[name="gridButton"]')
@@ -28,33 +27,5 @@ describe('HRScaffold Tests', () => {
 			.get('div[title="Jane"]')
 			.get('a[title="General and Admin"]')
 			.click();
-	});
-
-	it.only('Check anchors', () => {
-		cy.get('a[name="gridButton"]').should('have.attr', 'caption', 'Employees');
-
-		let anchors = [];
-		cy.get('.app-anchor')
-			.not('.active')
-			.not('a[name="logoutButton"]')
-			.each($el => {
-				if ($el.attr('name')) anchors.push($el.attr('name'));
-			})
-			.then(() => {
-				anchors.forEach(name =>
-					cy
-						.get('a[name=' + name + ']')
-						.click()
-						.wait(1000)
-				);
-			});
-	});
-
-	afterEach(() => {
-		// cy.get('a[name="logoutButton"]')
-		// 	.should('have.attr', 'caption', 'Logout')
-		// 	.click({ force: true })
-		// 	.get('a[name="forgetPassword"]')
-		// 	.should('have.attr', 'caption', 'Forgot Password');
 	});
 });
