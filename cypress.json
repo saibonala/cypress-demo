@@ -11,8 +11,8 @@
 		}
 	},
 	"env": {
-		"url": "http://pk7ksg1hy21h.cloud.wavemakeronline.com/HRScaffold",
-        "userid": "user",
-        "secret": "user"
+		"baseUrl": "http://pk7ksg1hy21h.cloud.wavemakeronline.com/HRScaffold",
+        "username": "user",
+        "password": "user"
 	}
 }

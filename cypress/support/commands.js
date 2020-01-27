@@ -1,8 +1,8 @@
 Cypress.Commands.add('signin', () => {
-	cy.visit(Cypress.env('url'), {
+	cy.visit(Cypress.env('baseUrl'), {
 		auth: {
-			username: Cypress.env('userid'),
-			password: Cypress.env('secret')
+			username: Cypress.env('username'),
+			password: Cypress.env('password')
 		},
 	});
 	cy.get('section[type="header"]')
