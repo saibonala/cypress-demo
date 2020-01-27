@@ -2,11 +2,10 @@ Cypress.Commands.add('signin', () => {
 	cy.visit(Cypress.env('baseUrl'), {
 		auth: {
 			username: Cypress.env('username'),
-			password: Cypress.env('password')
+			password: Cypress.env('password'),
 		},
 	});
-	cy.get('section[type="header"]')
-	.should('have.attr', 'name', 'header');
+	cy.get('section[type="header"]').should('have.attr', 'name', 'header');
 });
 //
 //
@@ -21,9 +20,9 @@ Cypress.Commands.add('signin', () => {
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 // cy.visit(Cypress.env('url'))
-	// 	.get('input[name="j_username"]')
-	// 	.type(Cypress.env('userid'))
-	// 	.get('input[name="j_password"]')
-	// 	.type(Cypress.env('secret'))
-	// 	.get('button[name="loginButton"]')
-	// 	.click()
+// 	.get('input[name="j_username"]')
+// 	.type(Cypress.env('userid'))
+// 	.get('input[name="j_password"]')
+// 	.type(Cypress.env('secret'))
+// 	.get('button[name="loginButton"]')
+// 	.click()

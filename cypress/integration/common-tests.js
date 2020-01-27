@@ -1,9 +1,9 @@
 describe('Common tests', () => {
-    before(() => {
-        cy.signin()
-    });
+	before(() => {
+		cy.signin();
+	});
 
-    it('Check anchors', () => {
+	it('Check anchors', () => {
 		let anchors = [];
 		cy.get('a')
 			.not('.active, a[caption="LOGOUT"], a[caption="Logout"]')
@@ -18,5 +18,5 @@ describe('Common tests', () => {
 						.wait(2000)
 				);
 			});
-    });
+	});
 });
