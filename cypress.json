@@ -10,6 +10,8 @@
 			"json": true
 		}
 	},
+	"pageLoadTimeout": 30000,
+	"defaultCommandTimeout": 30000,
 	"env": {
 		"baseUrl": "http://pk7ksg1hy21h.cloud.wavemakeronline.com/HRScaffold",
 		"username": "user",
